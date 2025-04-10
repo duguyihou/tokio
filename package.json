@@ -1,0 +1,18 @@
+{
+  "name": "tokio",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duguyihou/tokio.git"
+  },
+  "author": "duguyihou <duguyihou@gmail.com> (https://github.com/duguyihou)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duguyihou/tokio/issues"
+  },
+  "homepage": "https://github.com/duguyihou/tokio#readme",
+  "description": ""
+}
