@@ -4,6 +4,7 @@
 /packages/web/node_modules
 /node_modules
 /build
+/packages/service/.env
 
 # Logs
 logs
