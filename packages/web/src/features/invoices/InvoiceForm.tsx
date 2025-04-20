@@ -1,13 +1,12 @@
-import BillFromSection from "./BillFromSection"
+import BillFromSection from "./BillFromSection";
 
 const InvoiceForm = () => {
+	return (
+		<>
+			<div>InvoiceForm</div>
+			<BillFromSection />
+		</>
+	);
+};
 
-  return (
-    <>
-    <div>InvoiceForm</div>
-    <BillFromSection />
-    </>
-  )
-}
-
-export default InvoiceForm
+export default InvoiceForm;

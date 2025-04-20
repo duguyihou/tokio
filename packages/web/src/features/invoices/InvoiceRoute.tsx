@@ -1,12 +1,12 @@
-import InvoiceForm from "./InvoiceForm"
+import InvoiceForm from "./InvoiceForm";
 
 const InvoiceRoute = () => {
-  return (
-    <>
-    <div>InvoiceRoute</div>
-    <InvoiceForm />
-    </>
-  )
-}
+	return (
+		<>
+			<div>InvoiceRoute</div>
+			<InvoiceForm />
+		</>
+	);
+};
 
-export default InvoiceRoute
+export default InvoiceRoute;
