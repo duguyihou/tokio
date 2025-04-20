@@ -14,7 +14,8 @@
 			"**/node_modules/**",
 			"**/dist/**",
 			"**/build/**",
-			"**/.git/**"
+			"**/.git/**",
+			"**/routeTree.gen.ts"
 		]
 	},
 	"formatter": {

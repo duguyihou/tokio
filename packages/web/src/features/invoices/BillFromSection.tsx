@@ -1,5 +1,6 @@
-import React, { FormEvent } from "react";
-import { AnyFieldApi, useForm } from "@tanstack/react-form";
+import { type AnyFieldApi, useForm } from "@tanstack/react-form";
+import type React from "react";
+import type { FormEvent } from "react";
 
 const BillFromSection: React.FC = () => {
 	const form = useForm({
@@ -29,24 +30,21 @@ const BillFromSection: React.FC = () => {
 
 	return (
 		<form onSubmit={handleSubmit}>
-			<form.Field
-				name="receiverName"
-				children={(field) => {
-					return (
-						<>
-							<label htmlFor={field.name}>Name:</label>
-							<input
-								id={field.name}
-								name={field.name}
-								value={field.state.value}
-								onBlur={field.handleBlur}
-								onChange={(e) => field.handleChange(e.target.value)}
-							/>
-							<FieldInfo field={field} />
-						</>
-					);
-				}}
-			/>
+			<form.Field name="receiverName">
+				{(field) => (
+					<>
+						<label htmlFor={field.name}>Name:</label>
+						<input
+							id={field.name}
+							name={field.name}
+							value={field.state.value}
+							onBlur={field.handleBlur}
+							onChange={(e) => field.handleChange(e.target.value)}
+						/>
+						<FieldInfo field={field} />
+					</>
+				)}
+			</form.Field>
 			<button type="submit">Submit</button>
 		</form>
 	);

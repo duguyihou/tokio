@@ -10,104 +10,104 @@
 
 // Import Routes
 
-import { Route as rootRoute } from "./routes/__root";
-import { Route as InvoiceImport } from "./routes/invoice";
-import { Route as AboutImport } from "./routes/about";
-import { Route as IndexImport } from "./routes/index";
+import { Route as rootRoute } from './routes/__root'
+import { Route as InvoiceImport } from './routes/invoice'
+import { Route as AboutImport } from './routes/about'
+import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
 
 const InvoiceRoute = InvoiceImport.update({
-	id: "/invoice",
-	path: "/invoice",
-	getParentRoute: () => rootRoute,
-} as any);
+  id: '/invoice',
+  path: '/invoice',
+  getParentRoute: () => rootRoute,
+} as any)
 
 const AboutRoute = AboutImport.update({
-	id: "/about",
-	path: "/about",
-	getParentRoute: () => rootRoute,
-} as any);
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRoute,
+} as any)
 
 const IndexRoute = IndexImport.update({
-	id: "/",
-	path: "/",
-	getParentRoute: () => rootRoute,
-} as any);
+  id: '/',
+  path: '/',
+  getParentRoute: () => rootRoute,
+} as any)
 
 // Populate the FileRoutesByPath interface
 
-declare module "@tanstack/react-router" {
-	interface FileRoutesByPath {
-		"/": {
-			id: "/";
-			path: "/";
-			fullPath: "/";
-			preLoaderRoute: typeof IndexImport;
-			parentRoute: typeof rootRoute;
-		};
-		"/about": {
-			id: "/about";
-			path: "/about";
-			fullPath: "/about";
-			preLoaderRoute: typeof AboutImport;
-			parentRoute: typeof rootRoute;
-		};
-		"/invoice": {
-			id: "/invoice";
-			path: "/invoice";
-			fullPath: "/invoice";
-			preLoaderRoute: typeof InvoiceImport;
-			parentRoute: typeof rootRoute;
-		};
-	}
+declare module '@tanstack/react-router' {
+  interface FileRoutesByPath {
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexImport
+      parentRoute: typeof rootRoute
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutImport
+      parentRoute: typeof rootRoute
+    }
+    '/invoice': {
+      id: '/invoice'
+      path: '/invoice'
+      fullPath: '/invoice'
+      preLoaderRoute: typeof InvoiceImport
+      parentRoute: typeof rootRoute
+    }
+  }
 }
 
 // Create and export the route tree
 
 export interface FileRoutesByFullPath {
-	"/": typeof IndexRoute;
-	"/about": typeof AboutRoute;
-	"/invoice": typeof InvoiceRoute;
+  '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/invoice': typeof InvoiceRoute
 }
 
 export interface FileRoutesByTo {
-	"/": typeof IndexRoute;
-	"/about": typeof AboutRoute;
-	"/invoice": typeof InvoiceRoute;
+  '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/invoice': typeof InvoiceRoute
 }
 
 export interface FileRoutesById {
-	__root__: typeof rootRoute;
-	"/": typeof IndexRoute;
-	"/about": typeof AboutRoute;
-	"/invoice": typeof InvoiceRoute;
+  __root__: typeof rootRoute
+  '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/invoice': typeof InvoiceRoute
 }
 
 export interface FileRouteTypes {
-	fileRoutesByFullPath: FileRoutesByFullPath;
-	fullPaths: "/" | "/about" | "/invoice";
-	fileRoutesByTo: FileRoutesByTo;
-	to: "/" | "/about" | "/invoice";
-	id: "__root__" | "/" | "/about" | "/invoice";
-	fileRoutesById: FileRoutesById;
+  fileRoutesByFullPath: FileRoutesByFullPath
+  fullPaths: '/' | '/about' | '/invoice'
+  fileRoutesByTo: FileRoutesByTo
+  to: '/' | '/about' | '/invoice'
+  id: '__root__' | '/' | '/about' | '/invoice'
+  fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
-	IndexRoute: typeof IndexRoute;
-	AboutRoute: typeof AboutRoute;
-	InvoiceRoute: typeof InvoiceRoute;
+  IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  InvoiceRoute: typeof InvoiceRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
-	IndexRoute: IndexRoute,
-	AboutRoute: AboutRoute,
-	InvoiceRoute: InvoiceRoute,
-};
+  IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  InvoiceRoute: InvoiceRoute,
+}
 
 export const routeTree = rootRoute
-	._addFileChildren(rootRouteChildren)
-	._addFileTypes<FileRouteTypes>();
+  ._addFileChildren(rootRouteChildren)
+  ._addFileTypes<FileRouteTypes>()
 
 /* ROUTE_MANIFEST_START
 {
