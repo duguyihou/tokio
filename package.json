@@ -1,20 +1,26 @@
 {
-  "name": "tokio",
-  "version": "1.0.0",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "service:dev": "pnpm --filter service run start:dev",
-    "web:dev": "pnpm --filter web run dev"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/duguyihou/tokio.git"
-  },
-  "author": "duguyihou <duguyihou@gmail.com> (https://github.com/duguyihou)",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/duguyihou/tokio/issues"
-  },
-  "homepage": "https://github.com/duguyihou/tokio#readme",
-  "description": ""
+	"name": "tokio",
+	"version": "1.0.0",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"service:dev": "pnpm --filter service run start:dev",
+		"web:dev": "pnpm --filter web run dev",
+    "lint": "pnpm biome check ./packages/web",
+    "format": "pnpm biome format --write ./packages/web",
+    "format:check": "pnpm biome format --check ./packages/web"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/duguyihou/tokio.git"
+	},
+	"author": "duguyihou <duguyihou@gmail.com> (https://github.com/duguyihou)",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/duguyihou/tokio/issues"
+	},
+	"homepage": "https://github.com/duguyihou/tokio#readme",
+	"description": "",
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4"
+	}
 }

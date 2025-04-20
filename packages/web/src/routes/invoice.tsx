@@ -1,8 +1,6 @@
-import { createFileRoute } from '@tanstack/react-router'
-import { InvoiceRoute } from '../features/invoices'
+import { createFileRoute } from "@tanstack/react-router";
+import { InvoiceRoute } from "../features/invoices";
 
-export const Route = createFileRoute('/invoice')({
-  component: InvoiceRoute,
-})
-
-
+export const Route = createFileRoute("/invoice")({
+	component: InvoiceRoute,
+});
