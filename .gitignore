@@ -82,3 +82,29 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+
+# Logs
+/packages/web/logs
+/packages/web/*.log
+/packages/web/npm-debug.log*
+/packages/web/yarn-debug.log*
+/packages/web/yarn-error.log*
+/packages/web/pnpm-debug.log*
+/packages/web/lerna-debug.log*
+
+/packages/web/node_modules
+/packages/web/dist
+/packages/web/dist-ssr
+/packages/web/*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+/packages/web/.DS_Store
+*.suo
+*.ntvs*
+/packages/web/*.njsproj
+/packages/web/*.sln
+/packages/web/*.sw?
