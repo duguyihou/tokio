@@ -2,10 +2,9 @@ import InvoiceForm from "./InvoiceForm";
 
 const InvoiceRoute = () => {
 	return (
-		<>
-			<div>InvoiceRoute</div>
+		<div className="w-full">
 			<InvoiceForm />
-		</>
+		</div>
 	);
 };
 
