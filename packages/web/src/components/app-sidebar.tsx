@@ -14,7 +14,7 @@ import {
 const items = [
 	{
 		title: "Home",
-		url: "#",
+		url: "/",
 		icon: Home,
 	},
 	{
@@ -24,12 +24,12 @@ const items = [
 	},
 	{
 		title: "Search",
-		url: "#",
+		url: "/search",
 		icon: Search,
 	},
 	{
 		title: "Settings",
-		url: "#",
+		url: "/settings",
 		icon: Settings,
 	},
 ];
