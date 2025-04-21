@@ -18,14 +18,9 @@ const items = [
 		icon: Home,
 	},
 	{
-		title: "Inbox",
-		url: "#",
+		title: "Invoice",
+		url: "/invoice",
 		icon: Inbox,
-	},
-	{
-		title: "Calendar",
-		url: "#",
-		icon: Calendar,
 	},
 	{
 		title: "Search",
@@ -44,7 +39,7 @@ export function AppSidebar() {
 		<Sidebar>
 			<SidebarContent>
 				<SidebarGroup>
-					<SidebarGroupLabel>Application</SidebarGroupLabel>
+					<SidebarGroupLabel>Tokio</SidebarGroupLabel>
 					<SidebarGroupContent>
 						<SidebarMenu>
 							{items.map((item) => (
