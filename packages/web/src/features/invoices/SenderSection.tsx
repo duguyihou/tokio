@@ -1,19 +1,24 @@
 import FieldInfo from "./field/FieldInfo";
+import FieldInput from "./field/FieldInput";
 import FieldItem from "./field/FieldItem";
 import FieldLabel from "./field/FieldLabel";
-import FieldInput from "./field/FiledInput";
-import useInvoiceForm from "./useInvoiceForm";
+import type useInvoiceForm from "./useInvoiceForm";
 
-const BillToSection = () => {
-	const { Field } = useInvoiceForm();
+type Props = {
+	invoiceForm: ReturnType<typeof useInvoiceForm>;
+};
+const SenderSection = (props: Props) => {
+	const {
+		invoiceForm: { Field },
+	} = props;
 
 	return (
 		<div>
-			<h2 className="text-2xl font-bold">Bill To</h2>
+			<h2 className="text-2xl font-bold">Bill From</h2>
 			<p className="text-gray-500 text-sm">
-				Fill in the details of the receiver of the invoice.
+				Fill in the details of the sender of the invoice.
 			</p>
-			<Field name="receiver.name">
+			<Field name="sender.name">
 				{(field) => (
 					<>
 						<FieldItem>
@@ -24,14 +29,14 @@ const BillToSection = () => {
 								value={field.state.value}
 								onBlur={field.handleBlur}
 								onChange={(e) => field.handleChange(e.target.value)}
-								placeholder="Receiver name"
+								placeholder="Your name"
 							/>
 						</FieldItem>
 						<FieldInfo field={field} />
 					</>
 				)}
 			</Field>
-			<Field name="receiver.address">
+			<Field name="sender.address">
 				{(field) => (
 					<>
 						<FieldItem>
@@ -42,14 +47,14 @@ const BillToSection = () => {
 								value={field.state.value}
 								onBlur={field.handleBlur}
 								onChange={(e) => field.handleChange(e.target.value)}
-								placeholder="Receiver address"
+								placeholder="Your address"
 							/>
 						</FieldItem>
 						<FieldInfo field={field} />
 					</>
 				)}
 			</Field>
-			<Field name="receiver.zip">
+			<Field name="sender.zip">
 				{(field) => (
 					<>
 						<FieldItem>
@@ -60,14 +65,14 @@ const BillToSection = () => {
 								value={field.state.value}
 								onBlur={field.handleBlur}
 								onChange={(e) => field.handleChange(e.target.value)}
-								placeholder="Receiver zip code"
+								placeholder="Your zip code"
 							/>
 						</FieldItem>
 						<FieldInfo field={field} />
 					</>
 				)}
 			</Field>
-			<Field name="receiver.city">
+			<Field name="sender.city">
 				{(field) => (
 					<>
 						<FieldItem>
@@ -78,14 +83,14 @@ const BillToSection = () => {
 								value={field.state.value}
 								onBlur={field.handleBlur}
 								onChange={(e) => field.handleChange(e.target.value)}
-								placeholder="Receiver city"
+								placeholder="Your city"
 							/>
 						</FieldItem>
 						<FieldInfo field={field} />
 					</>
 				)}
 			</Field>
-			<Field name="receiver.country">
+			<Field name="sender.country">
 				{(field) => (
 					<>
 						<FieldItem>
@@ -96,14 +101,14 @@ const BillToSection = () => {
 								value={field.state.value}
 								onBlur={field.handleBlur}
 								onChange={(e) => field.handleChange(e.target.value)}
-								placeholder="Receiver country"
+								placeholder="Your country"
 							/>
 						</FieldItem>
 						<FieldInfo field={field} />
 					</>
 				)}
 			</Field>
-			<Field name="receiver.email">
+			<Field name="sender.email">
 				{(field) => (
 					<>
 						<FieldItem>
@@ -114,14 +119,14 @@ const BillToSection = () => {
 								value={field.state.value}
 								onBlur={field.handleBlur}
 								onChange={(e) => field.handleChange(e.target.value)}
-								placeholder="Receiver email"
+								placeholder="Your email"
 							/>
 						</FieldItem>
 						<FieldInfo field={field} />
 					</>
 				)}
 			</Field>
-			<Field name="receiver.phone">
+			<Field name="sender.phone">
 				{(field) => (
 					<>
 						<FieldItem>
@@ -132,7 +137,7 @@ const BillToSection = () => {
 								value={field.state.value}
 								onBlur={field.handleBlur}
 								onChange={(e) => field.handleChange(e.target.value)}
-								placeholder="Receiver phone number"
+								placeholder="Your phone number"
 							/>
 						</FieldItem>
 						<FieldInfo field={field} />
@@ -143,4 +148,4 @@ const BillToSection = () => {
 	);
 };
 
-export default BillToSection;
+export default SenderSection;

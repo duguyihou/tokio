@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import type { FormEvent } from "react";
-import BillFromSection from "./BillFromSection";
-import BillToSection from "./BillToSection";
+import SenderSection from "./SenderSection";
+import ReceiverSection from "./ReceiverSection";
 import useInvoiceForm from "./useInvoiceForm";
 
 const InvoiceForm = () => {
@@ -15,10 +15,9 @@ const InvoiceForm = () => {
 	return (
 		<form onSubmit={handleSubmit} className="flex flex-col p-4">
 			<div className="flex gap-6">
-				<BillFromSection />
-				<BillToSection />
+				<SenderSection invoiceForm={invoiceForm} />
+				<ReceiverSection invoiceForm={invoiceForm} />
 			</div>
-			inv
 			<div className="flex justify-end w-full">
 				<Button type="submit" disabled={!invoiceForm.state.isValid}>
 					Next
