@@ -1,8 +1,8 @@
-import FieldInfo from "./field/FieldInfo";
-import FieldInput from "./field/FieldInput";
-import FieldItem from "./field/FieldItem";
-import FieldLabel from "./field/FieldLabel";
-import type useInvoiceForm from "./useInvoiceForm";
+import FieldInfo from "../field/FieldInfo";
+import FieldInput from "../field/FieldInput";
+import FieldItem from "../field/FieldItem";
+import FieldLabel from "../field/FieldLabel";
+import type useInvoiceForm from "../useInvoiceForm";
 
 type Props = {
 	invoiceForm: ReturnType<typeof useInvoiceForm>;

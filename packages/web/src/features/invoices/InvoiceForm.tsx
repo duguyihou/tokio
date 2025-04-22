@@ -1,15 +1,15 @@
 import { Button } from "@/components/ui/button";
 import type { FormEvent } from "react";
-import ReceiverSection from "./ReceiverSection";
-import SenderSection from "./SenderSection";
+import ReceiverSection from "./From&To/ReceiverSection";
+import SenderSection from "./From&To/SenderSection";
 import useInvoiceForm from "./useInvoiceForm";
 
 const InvoiceForm = () => {
 	const invoiceForm = useInvoiceForm();
-	const handleSubmit = (e: FormEvent) => {
-		e.preventDefault();
-		e.stopPropagation();
-		invoiceForm.handleSubmit();
+	const handleSubmit = (event: FormEvent) => {
+		event.preventDefault();
+		event.stopPropagation();
+		invoiceForm.handleSubmit()
 	};
 
 	return (
