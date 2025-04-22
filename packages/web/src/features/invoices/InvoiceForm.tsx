@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import type { FormEvent } from "react";
-import SenderSection from "./SenderSection";
 import ReceiverSection from "./ReceiverSection";
+import SenderSection from "./SenderSection";
 import useInvoiceForm from "./useInvoiceForm";
 
 const InvoiceForm = () => {
