@@ -1,4 +1,4 @@
-import InvoiceForm from "./InvoiceForm";
+import InvoiceForm from "./invoice-form";
 
 const InvoiceRoute = () => {
 	return (

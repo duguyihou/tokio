@@ -1,2 +1,2 @@
-import InvoiceRoute from "./InvoiceRoute";
+import InvoiceRoute from "./invoice-route";
 export { InvoiceRoute };

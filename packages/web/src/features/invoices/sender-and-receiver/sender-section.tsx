@@ -1,7 +1,7 @@
-import FieldInfo from "../field/FieldInfo";
-import FieldInput from "../field/FieldInput";
-import FieldItem from "../field/FieldItem";
-import FieldLabel from "../field/FieldLabel";
+import FieldInfo from "../field/field-info";
+import FieldInput from "../field/field-input";
+import FieldItem from "../field/field-item";
+import FieldLabel from "../field/field-label";
 import type useInvoiceForm from "../useInvoiceForm";
 
 type Props = {
